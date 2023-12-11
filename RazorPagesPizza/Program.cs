@@ -8,7 +8,7 @@ var connectionString = builder.Configuration.GetConnectionString("RazorPagesPizz
 builder.Services.AddDbContext<RazorPagesPizzaAuth>(options =>
     options.UseSqlite(connectionString));
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+builder.Services.AddDefaultIdentity<RazorPagesPizzaUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<RazorPagesPizzaAuth>();
 
 // Add services to the container.
